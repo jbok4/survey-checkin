@@ -39,7 +39,7 @@ class Api::UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:name, :email, :phone, :insurance_co, :insurance_number, :reason)
+    params.require(:user).permit(:name, :birthday, :email, :phone, :insurance_co, :insurance_number, :reason)
   end
    
    def find_user
