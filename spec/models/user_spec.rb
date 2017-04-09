@@ -19,13 +19,20 @@ RSpec.describe User, type: :model do
     end
 
 
-    it 'requires that a name is unique'
+    it 'requires that name and insurance number are unique' do
+      create(:user)
+      user = build(:user)
 
-    it 'requires that an insurance_number is unique'
+      expect(user.valid?).to equal(false)
+      expect(user.errors.full_messages).to eq([
+        "Name has already been taken", 
+        "Insurance number has already been taken"
+        ])
+    end
 
     it 'requires that a phone number has 10 digits'
 
-    it 'requires that an email address is valid'
+    it 'requires that an email is valid (contains a @ symbol and a .com, .org, etc)'
 
   end
 

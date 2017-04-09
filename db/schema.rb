@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 20170408234053) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "insurance_co"
-    t.integer  "insurance_number"
+    t.string   "insurance_number"
     t.string   "email"
     t.string   "reason"
     t.datetime "created_at",       null: false
