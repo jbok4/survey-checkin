@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="cipherApp">
   <head>
-    <title>CipherCheckin</title>
+    <title>Cipher Checkin</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,6 @@
   </head>
 
   <body>
-    <%= yield %>
+    <ui-view></ui-view>
   </body>
 </html>

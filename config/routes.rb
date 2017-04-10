@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :doctors
   end
 
-  root to: "application#angular-home"
+  root to: "application#home"
 end

@@ -1,4 +1,0 @@
-# This will add Angular and Bootstrap-Sass
-asset 'angular'
-asset 'bootstrap-sass-official'
-asset 'angular-ui-router'
