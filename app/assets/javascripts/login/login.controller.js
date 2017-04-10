@@ -1,12 +1,35 @@
 (function() {
   'use strict';
 
-  angular
-    .module('cipherApp')
-    .controller('LoginController', [function() {
-      var vm = this;
+  function LoginController(LoginFactory, $stateParams) {
+    
+    var vm = this;
+    vm.createUser = createUser;
+    vm.addUser = addUser;
 
-      vm.name = "Jaclyn";
-      
-    }]);
+    activate();
+
+
+    // defined methods
+    function activate() {
+    
+    }
+
+function createUser() {
+      return LoginFactory.createUser(vm.user, vm.user.id)
+                        .then(addUser)
+    }
+
+    function addUser(data) {
+      vm.user.users.push(data);
+      getUsers();
+      vm.user = {};
+      return vm.users.push(data);
+    }
+
+  };
+
+  angular
+  .module('cipherApp')
+  .controller('LoginController', LoginController);
 }());

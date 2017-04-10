@@ -1,2 +1,21 @@
-<h2>Login Home Page</h2>
-<h3>{{ vm.name }}</h3>
+<h2>Welcome to Cipher</h2>
+<p>Please log into our system to help expedite your visit.</p>
+
+  <div class="col-md-12">
+    <h3>{{ vm.user.name }} {{ vm.user.email }}</h3>
+    <p>{{ vm.user.reason }}</p>
+  </div>
+
+  <form ng-submit="vm.createLogin()" class="well well-sm col-md-6">
+      
+      <div class="field">
+        <input type="text" class="form-control" placeholder="User Name"  ng-model="vm.user.name" required></input><br>
+
+        <input type="text" class="form-control" placeholder="User Email"  ng-model="vm.user.email" required></input><br>
+        
+        <textarea class="form-control" placeholder="Reason for Visiting"  ng-model="vm.user.reason" required></textarea><br>
+      </div>
+
+      <button class="btn btn-info ribbon" type="submit">Submit</button>
+    </form>
+
