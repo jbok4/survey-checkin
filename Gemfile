@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'bower-rails', '~> 0.11.0'
-gem 'angular-rails-templates'
+# gem 'angular-rails-templates'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 
