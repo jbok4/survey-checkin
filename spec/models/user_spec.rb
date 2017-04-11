@@ -14,7 +14,6 @@ RSpec.describe User, type: :model do
         "Email can't be blank",
         "Email is invalid",
         "Phone can't be blank",
-        # "Phone only numbers with spaces or hyphens",
         "Insurance co can't be blank",
         "Insurance number can't be blank"
         ])
@@ -31,19 +30,6 @@ RSpec.describe User, type: :model do
         "Insurance number has already been taken"
         ])
     end
-
-    # it 'requires that a phone number has 10 digits with hyphens, (example 555-867-5309)' do
-    #   user1 = build(:user, phone: '555 867 5309')
-    #   user2 = build(:user, phone: '555-867-5309')
-    #   user3 = build(:user, phone: '8675309')
-    #   user4 = build(:user, phone: '5558675309')
-
-    #   expect(user1.valid?).to equal(false)
-    #   expect(user2.valid?).to equal(true)
-    #   expect(user3.valid?).to equal(false)
-    #   expect(user4.valid?).to equal(false)
-
-    # end
 
     it 'requires that an email is valid (contains a @ symbol and a .com, .org, etc)' do
       user1 = build(:user, email: 'jackie.com')

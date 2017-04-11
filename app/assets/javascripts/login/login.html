@@ -1,19 +1,30 @@
 <h2>Welcome to Cipher</h2>
 <p>Please log into our system to help expedite your visit.</p>
+<p>All form fields are mandatory</p>
 
   <div class="col-md-12">
-    <h3>{{ vm.user.name }} {{ vm.user.email }}</h3>
-    <p>{{ vm.user.reason }}</p>
+    <h3>{{ vm.user.name }} {{ vm.user.email }} {{ vm.user.phone }}</h3>
+    <p>{{ vm.user.birthday }}</p>
   </div>
 
-  <form ng-submit="vm.createLogin()" class="well well-sm col-md-6">
+  <form ng-submit="vm.createUser()" class="well well-sm col-md-6">
       
       <div class="field">
-        <input type="text" class="form-control" placeholder="User Name"  ng-model="vm.user.name" required></input><br>
+        <input type="text" class="form-control" placeholder="Full Name"  ng-model="vm.user.name" required></input><br>
 
-        <input type="text" class="form-control" placeholder="User Email"  ng-model="vm.user.email" required></input><br>
-        
-        <textarea class="form-control" placeholder="Reason for Visiting"  ng-model="vm.user.reason" required></textarea><br>
+        <input type="email" class="form-control" placeholder="Email"  ng-model="vm.user.email" required></input><br>
+
+        <input type="text" class="form-control" placeholder="Phone"  ng-model="vm.user.phone" required></input><br>
+
+        <input type="date" class="form-control" placeholder="Birthday"  ng-model="vm.user.birthday"></input><br>
+
+        <input type="text" class="form-control" placeholder="Insurance Co."  ng-model="vm.user.insurance_co" required></input><br>
+
+        <input type="text" class="form-control" placeholder="Insurance Number"  ng-model="vm.user.insurance_number" required></input><br>
+
+<!-- <input type="checkbox" class="form-control" placeholder="Which Doctor?"  ng-model="vm.user.doctor_id" required></input><br>
+         -->
+        <textarea class="form-control" placeholder="Reason for Visiting"  ng-model="vm.user.reason"></textarea><br>
       </div>
 
       <button class="btn btn-info ribbon" type="submit">Submit</button>

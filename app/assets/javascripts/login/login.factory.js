@@ -27,6 +27,7 @@
             }
           };
           return $http(req)
+                .then(handleResponse)
                 .catch(handleError)
       }
 

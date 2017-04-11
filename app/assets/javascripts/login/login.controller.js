@@ -12,16 +12,27 @@
 
     // defined methods
     function activate() {
-    
+      getUsers();
     }
 
-function createUser() {
-      return LoginFactory.createUser(vm.user, vm.user.id)
-                        .then(addUser)
+    function getUsers() {
+      return LoginFactory.getUsers()
+              .then(setUsers)
+    }
+
+    function setUsers(data) {
+      vm.users = data;
+    }
+
+    function createUser() {
+      console.log('hello')
+        return LoginFactory.createUser(vm.user)
+                          .then(addUser)
     }
 
     function addUser(data) {
-      vm.user.users.push(data);
+      console.log(data)
+      vm.users.push(data);
       getUsers();
       vm.user = {};
       return vm.users.push(data);
